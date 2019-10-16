@@ -1,0 +1,29 @@
+In this project, we will create a traffic simulation. For simplicity, this will be an underground map, because this can be represented as a simple graph, in contrast to more complex maps. Compare the game MiniMetro (https://store.steampowered.com/app/287980/Mini_Metro/) for the kind of thing I mean.
+
+
+Create a set of data models to represent underground stations, paths connecting them, vehicles and passengers on it. Paths / Path segments should support speed penalties (e.g. speed on a straight line is 1x, in a curve it's 0.75x or so - these numbers should be configuration variables) and whether it is possible for trains to overtake each other in a given segment. Vehicles should have a base speed and how many passengers they can carry. Passengers should have a destination station they want to reach. Make the design SOLID.
+	•	Look at SOLID and understand what it means, how to design SOLID class and interface hierarchies and what to avoid.
+	•	Design the class hierarchies and share the design here, so I can give you feedback.
+	•	Implement the class hierarchy
+
+
+	•	Write a generator that creates a network of stations and an initial number of passengers at each station.
+	•	All stations should be connected to a line, the graph of stations should be simply connected.
+	•	The generator should take a set of parameters to vary the generated network.
+	•	In particular, it should accept a seed value for initialising the random number generator used, so that simulation runs can be recreated deterministically.
+	•	If the seed value is left out, the simulation should choose a random seed.
+	•	Other parameters should be chosen at random (within a sensible range) if unspecified.
+
+
+	•	Write a (single-threaded) simulator for evolving our map.
+	•	Trains should move in one direction on their current line.
+	•	Trains should reverse direction when they reach the end of the line.
+	•	Passengers should get on and off trains. Bonus points if passengers know the fastest route to their destination and follow it.
+	•	Passengers disappear when they reach their destination.
+	•	New passengers should be created at random (the rate of new passengers should be a parameter we can vary).
+
+
+	•	What is currently preventing us from parallelising the simulator?
+	•	Perform the necessary changes (if any) to simulate all trains in parallel.
+	•	Can we simulate all stations in parallel? Why/why not?
+	•	Can we simulate all passengers in parallel? Why/why not?
