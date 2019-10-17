@@ -2,13 +2,13 @@ package Stations;
 
 import Stations.Station;
 
-public class London implements Station {
+public class Manchester implements Station {
 
     String name;
     int passengers;
 
-    public London(int passengers){
-        name = "London";
+    public Manchester(int passengers){
+        name = "Manchester";
         passengers = this.passengers;
     }
 }

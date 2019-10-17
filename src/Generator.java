@@ -1,13 +1,13 @@
-import Stations.London;
+import Stations.*;
 
 public class Generator {
 
     public static void Generator(){
         London London = new London(1000);
-        London Manchester = new London("Manchester", 100);
-        London Birmingham = new London("Birmingham", 500);
-        London Leeds = new London("Leeds", 300);
-        London Liverpool = new London("Liverpool",400);
+        Manchester Manchester = new Manchester(500);
+        Leeds Leeds = new Leeds(400);
+        Birmingham Birmingham = new Birmingham((800));
+        Liverpool Liverpool = new Liverpool(300);
     }
 
 
