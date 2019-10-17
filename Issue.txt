@@ -1,7 +1,7 @@
 In this project, we will create a traffic simulation. For simplicity, this will be an underground map, because this can be represented as a simple graph, in contrast to more complex maps. Compare the game MiniMetro (https://store.steampowered.com/app/287980/Mini_Metro/) for the kind of thing I mean.
 
 
-Create a set of data models to represent underground stations, paths connecting them, vehicles and passengers on it. Paths / Path segments should support speed penalties (e.g. speed on a straight line is 1x, in a curve it's 0.75x or so - these numbers should be configuration variables) and whether it is possible for trains to overtake each other in a given segment. Vehicles should have a base speed and how many passengers they can carry. Passengers should have a destination station they want to reach. Make the design SOLID.
+Create a set of data models to represent underground stations, paths connecting them, vehicles and passengers on it. Path_original / Path_original.Path_London_Birmingham segments should support speed penalties (e.g. speed on a straight line is 1x, in a curve it's 0.75x or so - these numbers should be configuration variables) and whether it is possible for trains to overtake each other in a given segment. Vehicles should have a base speed and how many passengers they can carry. Passengers should have a destination station they want to reach. Make the design SOLID.
 	•	Look at SOLID and understand what it means, how to design SOLID class and interface hierarchies and 		what to avoid.
 	•	Design the class hierarchies and share the design here, so I can give you feedback.
 	•	Implement the class hierarchy
