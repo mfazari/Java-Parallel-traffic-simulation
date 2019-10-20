@@ -8,13 +8,10 @@ public class Main {
        Generator generator = new Generator();
        // Random seed
        generator.start(4);
+
+       // TODO implement train simulator
+
     }
 
-    static void randomGenerator(long seed) {
-        Random generator = new Random(seed);
-        double num = generator.nextInt(1000);
-        System.out.println((num));
-        num = generator.nextInt(500);
-        System.out.println((num));
-    }
+
 }

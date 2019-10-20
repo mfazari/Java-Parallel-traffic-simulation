@@ -13,7 +13,7 @@ public class Train_1 extends Train {
     public Train_1(){
         this.passenger_number = 400;
         this.max_speed = 120;
-        this.current_speed = route.getSpeed();
+        this.current_speed = route.getSpeed(max_speed);
     }
 
 }
