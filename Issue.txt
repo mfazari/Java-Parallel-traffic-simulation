@@ -10,7 +10,7 @@ Create a set of data models to represent underground stations, paths connecting 
 	•	Write a generator that creates a network of stations and an initial number of passengers at each station.
 	•	All stations should be connected to a line, the graph of stations should be simply connected.
 	•	The generator should take a set of parameters to vary the generated network.
-	•	In particular, it should accept a seed value for initialising the random number generator used, so that simulation runs can be recreated deterministically.
+	•	In particular, it should accept a seed value for initializing the random number generator used, so that simulation runs can be recreated deterministically.
 	•	If the seed value is left out, the simulation should choose a random seed.
 	•	Other parameters should be chosen at random (within a sensible range) if unspecified.
 
@@ -23,7 +23,7 @@ Create a set of data models to represent underground stations, paths connecting 
 	•	New passengers should be created at random (the rate of new passengers should be a parameter we can vary).
 
 
-	•	What is currently preventing us from parallelising the simulator?
+	•	What is currently preventing us from parallelizing the simulator?
 	•	Perform the necessary changes (if any) to simulate all trains in parallel.
 	•	Can we simulate all stations in parallel? Why/why not?
 	•	Can we simulate all passengers in parallel? Why/why not?

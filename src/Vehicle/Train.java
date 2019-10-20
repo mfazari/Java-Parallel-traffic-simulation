@@ -1,8 +1,9 @@
 package Vehicle;
 
-public class Train implements Vehicle {
+public class Train {
 
     int speed;
+
 
 
 }
