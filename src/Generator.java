@@ -18,11 +18,20 @@ public class Generator {
         Liverpool Liverpool = new Liverpool(rand.nextInt(300));
 
         // TODO Generate Paths
-        Route London_Birmingham = new Route(London, Birmingham);
-        Route Birmingham_Manchester = new Route(Birmingham, Manchester);
-        Route Birmingham_Liverpool = new Route(Birmingham, Liverpool);
-        Route Manchester_Liverpool = new Route(Manchester, Liverpool);
-        Route Manchester_Leeds = new Route(Manchester, Leeds);
+        Route London_Birmingham = new Route(London, Birmingham, true, 120);
+        Route Birmingham_London = new Route(Birmingham, London, false, 120);
+
+        Route Birmingham_Manchester = new Route(Birmingham, Manchester, false, 120);
+        Route Manchester_Birmingham = new Route(Manchester, Birmingham, false, 120);
+
+        Route Birmingham_Liverpool = new Route(Birmingham, Liverpool, false, 120);
+        Route Liverpool_Birmingham = new Route(Liverpool, Birmingham, false, 120);
+
+        Route Manchester_Liverpool = new Route(Manchester, Liverpool, false, 100);
+        Route Liverpool_Manchester = new Route(Liverpool, Manchester, false, 100);
+
+        Route Manchester_Leeds = new Route(Manchester, Leeds, false, 100);
+        Route Leeds_Manchester = new Route(Leeds, Manchester, false, 100);
     }
 
 

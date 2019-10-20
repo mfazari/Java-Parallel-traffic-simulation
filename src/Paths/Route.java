@@ -6,16 +6,18 @@ public class Route {
 
     Station from;
     Station to;
-    int max_speed;
+    boolean overtake; // ability to overtake a train
 
-    public Route(Station city1, Station city2){
+    public Route(Station city1, Station city2, boolean overtake, int speed){
         this.from = city1;
         this.to = city2;
-        this.max_speed = getSpeed();
+        this.overtake = overtake;
+        this.speed = speed;
     }
 
     // TODO implement speed function
     public int getSpeed() {
+
         return 0;
     }
 }
