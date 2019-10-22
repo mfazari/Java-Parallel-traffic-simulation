@@ -8,10 +8,6 @@ public class Main {
        Generator generator = new Generator();
        // Random seed
        generator.start(4);
-
-       // TODO implement train simulator
-
     }
-
-
+    
 }

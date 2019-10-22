@@ -11,11 +11,11 @@ public class Generator {
         Random rand = new Random(seed);
 
         // Generate Stations with random passenger number using a deterministic seed
-        London London = new London(rand.nextInt(1000));
-        Manchester Manchester = new Manchester(rand.nextInt(500));
-        Leeds Leeds = new Leeds(rand.nextInt(400));
-        Birmingham Birmingham = new Birmingham(rand.nextInt(600));
-        Liverpool Liverpool = new Liverpool(rand.nextInt(300));
+        Station London = new Station("London", rand.nextInt(1000));
+        Station Manchester = new Station("Manchester", rand.nextInt(500));
+        Station Leeds = new Station("Leeds", rand.nextInt(400));
+        Station Birmingham = new Station("Birmingham", rand.nextInt(600));
+        Station Liverpool = new Station("Liverpool", rand.nextInt(300));
 
         // TODO Generate Paths
         Route London_Birmingham = new Route(London, Birmingham, true, 120);
@@ -32,6 +32,7 @@ public class Generator {
 
         Route Manchester_Leeds = new Route(Manchester, Leeds, false, 100);
         Route Leeds_Manchester = new Route(Leeds, Manchester, false, 100);
+
     }
 
 

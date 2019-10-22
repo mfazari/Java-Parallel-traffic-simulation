@@ -1,13 +1,15 @@
 package Paths;
 
+import Stations.IStation;
 import Stations.Station;
 
-public class Route {
+public class Route implements IRoute {
 
-    Station from;
-    Station to;
+    IStation from;
+    IStation to;
     boolean overtake; // ability to overtake a train
     int speed;
+    int length;
 
     public Route(Station city1, Station city2, boolean overtake, int speed){
         this.from = city1;
@@ -17,6 +19,7 @@ public class Route {
     }
 
     // TODO implement speed function
+    @Override
     public int getSpeed(int max_speed_train) {
         int result = 100;
         if(max_speed_train >= speed){
@@ -27,5 +30,12 @@ public class Route {
             result = max_speed_train;
         }
         return result;
+    }
+
+    @Override
+    public int commute_time(int current_speed){
+        int wait = 5;
+        int time = 5+ this.length/current_speed;
+        return time;
     }
 }
