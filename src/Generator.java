@@ -4,7 +4,7 @@ import Vehicle.*;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Generator {
+public class Generator extends Thread {
 
     // TODO implement simulate
     public static void simulate(int seed) throws InterruptedException {
@@ -26,11 +26,12 @@ public class Generator {
         Route Manchester_Liverpool = new Route(Manchester, Liverpool, false, 100);
         Route Manchester_Leeds = new Route(Manchester, Leeds, false, 100);
 
+        // Let's get this thing going
         trains(London_Birmingham, Birmingham_Manchester, Birmingham_Liverpool, Manchester_Liverpool, Manchester_Leeds);
 
     }
 
-    // TODO Make this function parallel and functioning
+    // TODO Make this function parallel and functioning, add console prints to check status
     public static void trains(Route London_Birmingham, Route Birmingham_Manchester, Route Birmingham_Liverpool, Route Manchester_Liverpool, Route Manchester_Leeds) throws InterruptedException {
         // Trains
         Train_1 train1 = new Train_1(London_Birmingham);

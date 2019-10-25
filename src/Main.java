@@ -7,6 +7,8 @@ public class Main {
        Generator generator = new Generator();
        // Random seed
        generator.simulate(4);
+       Generator_Beta generator2 = new Generator_Beta(4);
+       generator2.simulate();
     }
     
 }
