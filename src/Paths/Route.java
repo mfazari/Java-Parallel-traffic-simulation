@@ -18,7 +18,6 @@ public class Route implements IRoute {
         this.speed = speed;
     }
 
-    // TODO implement speed function
     @Override
     public int getSpeed(int max_speed_train) {
         int result = 100;
