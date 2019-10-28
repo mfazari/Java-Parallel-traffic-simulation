@@ -1,12 +1,20 @@
 package Stations;
 
+import Passengers.PassengerCreator;
+
 public class Station implements IStation {
 
     String name;
-    int passengers;
+    String[] passengerList;
 
-    public Station(String name, int passengers){
+    public Station(String name) {
         this.name = name;
-        this.passengers = passengers;
+        this.passengerList = getPassengers(this.name);
     }
+
+    public String[] getPassengers(String name) {
+        PassengerCreator example = new PassengerCreator(name);
+        return example.createPassengers();
+    }
+
 }

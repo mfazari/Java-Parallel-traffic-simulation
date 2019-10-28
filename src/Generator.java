@@ -5,10 +5,7 @@ import Vehicle.*;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-// TODO implement System.out.println
 public class Generator extends Thread {
-
-    Random rand;
 
     // Stations
     Station London;
@@ -25,12 +22,14 @@ public class Generator extends Thread {
     Route Manchester_Leeds;
 
     public Generator(int seed) {
-        this.rand = new Random(seed);
-        this.London = new Station("London", this.rand.nextInt(1000));
-        this.Birmingham = new Station("Birmingham", this.rand.nextInt(600));
-        this.Manchester = new Station("Manchester", this.rand.nextInt(500));
-        this.Leeds = new Station("Leeds", this.rand.nextInt(400));
-        this.Liverpool = new Station("Liverpool", this.rand.nextInt(300));
+        // Stations
+        this.London = new Station("London");
+        this.Birmingham = new Station("Birmingham");
+        this.Manchester = new Station("Manchester");
+        this.Leeds = new Station("Leeds");
+        this.Liverpool = new Station("Liverpool");
+
+        //Routes
         this.London_Birmingham = new Route(London, Birmingham, true, 120);
         this.Birmingham_Manchester = new Route(Birmingham, Manchester, false, 120);
         this.Birmingham_Liverpool = new Route(Birmingham, Liverpool, false, 120);
@@ -120,7 +119,7 @@ public class Generator extends Thread {
         go(time, train_name);
     }
 
-    public void simulate(){
+    public void simulate() {
         System.out.println("Simulation is starting...");
         this.thread1.start();
         this.thread2.start();
