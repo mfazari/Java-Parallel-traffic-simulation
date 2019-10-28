@@ -36,10 +36,5 @@ public class Route implements IRoute {
         return time;
     }
 
-    @Override
-    public int passengernumber(){
-
-    }
-
 
 }

@@ -18,6 +18,10 @@ public class Train_1 extends Train {
         this.commute_time = route.commute_time(current_speed);
     }
 
+    // TODO implement this function
+    public void change_Station(){
+    }
+
 
 
 }

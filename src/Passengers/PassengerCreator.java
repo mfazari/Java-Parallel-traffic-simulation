@@ -4,7 +4,7 @@ import Stations.Station;
 
 import java.util.Random;
 
-public class PassengerCreator {
+public class PassengerCreator implements IPassengerCreator {
 
     // TODO Make sense of this class
     String Station_Name;
@@ -16,6 +16,7 @@ public class PassengerCreator {
 
     // TODO implement function that creates Array with Random Passengers
 
+    @Override
     public String[] createPassengers() {
         Random rand = new Random();
         int low = 100;
