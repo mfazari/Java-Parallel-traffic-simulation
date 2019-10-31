@@ -33,4 +33,8 @@ public class Train {
         return this.name;
     }
 
+    public int max_seat_number(){
+        return this.max_seats;
+    }
+
 }

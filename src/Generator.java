@@ -180,4 +180,20 @@ public class Generator extends Thread {
 
     }
 
+    // TODO implement that function
+    public void passenger_information(String[] passengerlist, String Station, Train train){
+        int count = 0;
+            if(Station.equals("London")){
+                for(int i = 0; i < passengerlist.length; i++){
+                    if(passengerlist[i].equals("Birmingham") || count < train.max_seat_number()){
+                        count++;
+                    }
+            }
+        }
+            if(Station.equals("Birmingham") || ){
+
+            }
+
+    }
+
 }
