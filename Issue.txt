@@ -18,7 +18,7 @@ Create a set of data models to represent underground stations, paths connecting 
 	•	Write a (single-threaded) simulator for evolving our map.
 	•	Trains should move in one direction on their current line.
 	•	Trains should reverse direction when they reach the end of the line.
-	•	Passengers should get on and off trains. Bonus points if passengers know the fastest route to their destination and follow it.
+	•	Passengers should get on and off trains
 	•	Passengers disappear when they reach their destination.
 	•	New passengers should be created at random (the rate of new passengers should be a parameter we can vary).
 

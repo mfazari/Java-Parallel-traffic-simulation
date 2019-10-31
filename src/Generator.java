@@ -173,7 +173,6 @@ public class Generator extends Thread {
                     list[i] = "Manchester";
                 }
             }
-
         }
         return list;
 
@@ -182,15 +181,67 @@ public class Generator extends Thread {
 
     // TODO implement that function
     public void passenger_information(String[] passengerlist, String Station, Train train){
-        int count = 0;
+        int count_London_Birmingham = 0;
+        int count_Birmingham_London = 0;
+        int count_Birminham_Manchester = 0;
+        int count_Birmingham_Liverpool = 0;
+        int count_Manchester_Birmingham = 0;
+        int count_Manchester_Leeds = 0;
+        int count_Manchester_Liverpool = 0;
+        int count_Leeds_Manchester = 0;
+        int count_Liverpool_Birminham = 0;
+        int count_Liverpool_Manchester = 0;
+
             if(Station.equals("London")){
+                for(int i = 0; i < passengerlist.length; i++){
+                    if(passengerlist[i].equals("Birmingham") && count_London_Birmingham < train.max_seat_number()){
+                        count_London_Birmingham++;
+                    }
+            }
+        }
+            else if(Station.equals("Birmingham")){
+                for(int i = 0; i < passengerlist.length; i++){
+                    if(passengerlist[i].equals("London") && count < train.max_seat_number()){
+                        count++;
+                    }
+                    else if(passengerlist[i].equals("Manchester") && count < train.max_seat_number()){
+                        count++;
+                    }
+                    else if(passengerlist[i].equals("Liverpool") && count < train.max_seat_number()){
+                        count++;
+                    }
+                }
+            }
+            else if(Station.equals("Manchester")){
                 for(int i = 0; i < passengerlist.length; i++){
                     if(passengerlist[i].equals("Birmingham") || count < train.max_seat_number()){
                         count++;
                     }
+                    else if(passengerlist[i].equals("Leeds") || count < train.max_seat_number()){
+                        count++;
+                    }
+                    else if(passengerlist[i].equals("Liverpool") || count < train.max_seat_number()){
+                        count++;
+                    }
+                }
             }
-        }
-            if(Station.equals("Birmingham") || ){
+            else if(Station.equals("Leeds")){
+                for(int i = 0; i < passengerlist.length; i++){
+                    if(passengerlist[i].equals("Manchester") || count < train.max_seat_number()){
+                        count++;
+                    }
+                }
+            }
+            else if(Station.equals("Liverpool")){
+                for(int i = 0; i < passengerlist.length; i++){
+                    if(passengerlist[i].equals("Birmingham") || count < train.max_seat_number()){
+                        count++;
+                    }
+                    else if(passengerlist[i].equals("Manchester") || count < train.max_seat_number()){
+                        count++;
+                    }
+                }
+
 
             }
 
