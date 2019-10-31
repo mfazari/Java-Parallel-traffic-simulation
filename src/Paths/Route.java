@@ -37,4 +37,13 @@ public class Route implements IRoute {
     }
 
 
+    public Station get_to_Station(){
+        return this.to;
+    }
+
+    public Station get_from_Station(){
+        return this.from;
+    }
+
+
 }
