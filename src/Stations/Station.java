@@ -1,7 +1,5 @@
 package Stations;
 
-import Passengers.PassengerCreator;
-
 public class Station implements IStation {
 
     String name;
@@ -11,7 +9,7 @@ public class Station implements IStation {
     }
 
 
-    public String get_name(){
+    public String get_Station_name() {
         return this.name;
     }
 
